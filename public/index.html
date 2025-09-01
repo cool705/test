@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Awesome Site</title>
+  <title>My Awesome Blog</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -40,6 +40,28 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
+    .post {
+      margin-bottom: 30px;
+    }
+
+    .post-title {
+      font-size: 1.5em;
+      margin-bottom: 5px;
+    }
+
+    .post-title a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .post-title a:hover {
+      text-decoration: underline;
+    }
+
+    .post-excerpt {
+      color: #555;
+    }
+
     footer {
       background: #333;
       color: #fff;
@@ -54,24 +76,37 @@
 <body>
 
   <header>
-    <h1>Welcome to My Awesome Site</h1>
+    <h1>My Awesome Blog</h1>
   </header>
 
   <nav>
-    <a href="#">Home</a>
+    <a href="index.html">Home</a>
     <a href="#">About</a>
-    <a href="#">Services</a>
     <a href="#">Contact</a>
   </nav>
 
   <main>
-    <h2>Hello, World!</h2>
-    <p>test</p>
-    <p>Add your content here and expand the layout as needed.</p>
+    <div class="post">
+      <div class="post-title">
+        <a href="post1.html">Why I Started This Blog</a>
+      </div>
+      <div class="post-excerpt">
+        A quick look into why I decided to start sharing my thoughts with the world...
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="post-title">
+        <a href="post2.html">Top 5 Tools for Web Developers</a>
+      </div>
+      <div class="post-excerpt">
+        Explore some of the essential tools every web developer should consider using.
+      </div>
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 My Awesome Site. All rights reserved.
+    &copy; 2025 My Awesome Blog. All rights reserved.
   </footer>
 
 </body>
