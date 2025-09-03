@@ -48,9 +48,34 @@
   </header>
 
   <main>
-    <h2>Why I Decided to Start Sharing My Thoughts</h2>
-    <p>This is the full post content about why I wanted to start sharing my thoughts with the world...</p>
-    <!-- Add your new content here! -->
+    <h2>Release</h2>
+    <p>The game will be releasing very soon</p>
+    
+  <script>
+    const targetTimestamp = 1757876400 * 1000; 
+
+    function updateCountdown() {
+      const now = Date.now();
+      const distance = targetTimestamp - now;
+
+      if (distance <= 0) {
+        document.getElementById("countdown").textContent = "Time's up!";
+        clearInterval(timer);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").textContent =
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    const timer = setInterval(updateCountdown, 1000);
+    updateCountdown(); 
+  </script>
   </main>
 
   <footer>
