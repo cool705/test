@@ -91,11 +91,11 @@ nav {
     <p>The game will be releasing very soon, stay tuned for some code drops in this blog post when the game drops!</p>
   
   <script>
-    const targetTimestamp = 1757876400 * 1000; 
+    const discordtimestamp = 1757876400 * 1000; 
 
     function updateCountdown() {
       const now = Date.now();
-      const distance = targetTimestamp - now;
+      const distance = discordtimestamp - now;
 
       if (distance <= 0) {
         document.getElementById("countdown").textContent = "Game is out now!";
